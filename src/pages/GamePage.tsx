@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -10,19 +9,19 @@ interface TimelineEvent {
 }
 
 const GAME_EVENTS: TimelineEvent[] = [
-  { id: 1, text: "La Fontana: Will you?" },
-  { id: 2, text: "Walk, Bellevue Park + Mod" },
+  { id: 1, text: "La Fontana: Will you be my...?" },
+  { id: 2, text: "Walk in Bellevue Park + Mod" },
   { id: 3, text: "Ashford WA Cabin trip" },
   { id: 4, text: "Skagit Valley, part 1!" },
   { id: 5, text: "K1 Speed, Char-lotte" },
   { id: 6, text: "Disney, Universal, Miami!" },
-  { id: 7, text: "SeaPlane, Mustang, Legend night" },
+  { id: 7, text: "SeaPlane, Mustang, John Legend night" },
   { id: 8, text: "Ferragamo Gancini gift" },
   { id: 9, text: "Bainbridge Island getaway" },
   { id: 10, text: "Lazy day in, UTI oops" },
-  { id: 11, text: "Facetime dates, Namu Chicago" },
+  { id: 11, text: "Facetime dates, Namu in Chicago" },
   { id: 12, text: "EnchantMaze + Christmas fun" },
-  { id: 13, text: "Colorado trip adventure" },
+  { id: 13, text: "Colorado trip!" },
   { id: 14, text: "Voodoo naughty donuts" },
   { id: 15, text: "Flower bouquets of LOVE!" },
 ];
@@ -110,7 +109,7 @@ const GamePage: React.FC = () => {
 
       {/* Available events to drag */}
       <div className="bg-dustyblue-50 rounded-xl p-6 shadow-md mb-8">
-        <h2 className="text-xl font-semibold text-dustyblue-700 mb-4">Events to Place:</h2>
+        <h2 className="text-xl font-semibold text-dustyblue-700 mb-4 text-center">Events to Place:</h2>
         <div className="flex flex-wrap gap-3">
           {shuffledEvents.map((event, index) => (
             <div
@@ -127,24 +126,28 @@ const GamePage: React.FC = () => {
 
       {/* Timeline slots */}
       <div className="bg-dustyblue-50 rounded-xl p-6 shadow-md">
-        <h2 className="text-xl font-semibold text-dustyblue-700 mb-4">Our Timeline:</h2>
-        <div className="flex flex-col gap-3">
+        <h2 className="text-xl font-semibold text-dustyblue-700 mb-4 text-center">Our Timeline:</h2>
+        <div className="flex flex-col gap-3 items-center max-h-[60vh] overflow-y-auto">
           {slots.map((slot, index) => (
             <div
               key={index}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, index)}
               className={cn(
-                "flex border-2 rounded-lg p-3 min-h-[48px] transition-colors",
-                slot ? (slot.id === index + 1 ? "border-dustyblue-400 bg-dustyblue-100" : "border-dustyblue-200 bg-dustyblue-50") : "border-dashed border-dustyblue-300 bg-dustyblue-50"
+                "flex border-2 rounded-lg p-3 min-h-[48px] transition-colors w-full max-w-md",
+                slot
+                  ? (slot.id === index + 1
+                      ? "border-green-500 bg-dustyblue-100"
+                      : "border-red-500 bg-dustyblue-100")
+                  : "border-dashed border-dustyblue-300 bg-dustyblue-50"
               )}
             >
-              <div className="w-8 h-8 rounded-full bg-dustyblue-400 text-white flex items-center justify-center mr-3">
+              <div className="w-8 h-8 rounded-full bg-dustyblue-400 text-white flex items-center justify-center self-center">
                 {index + 1}
               </div>
               {slot ? (
                 <div 
-                  className="flex-grow flex items-center"
+                  className="flex-grow flex items-center justify-center text-center cursor-move"
                   draggable
                   onDragStart={(e) => handleDragStart(e, slot, index)}
                 >
@@ -176,9 +179,9 @@ const GamePage: React.FC = () => {
       {showSuccess && (
         <div className="fixed inset-0 bg-dustyblue-700/40 flex items-center justify-center p-4 z-50">
           <div className="bg-dustyblue-50 rounded-2xl p-8 max-w-md shadow-xl animate-fade-in border border-dustyblue-200">
-            <h2 className="text-3xl font-bold text-dustyblue-700 mb-4">You did it! 🎉</h2>
+            <h2 className="text-3xl font-bold text-dustyblue-700 mb-4">🎉🎉🎉AWW YOU DID THATATATAT!!? 🎉🎉🎉</h2>
             <p className="text-lg text-dustyblue-600 mb-6">
-              Amazing job remembering our special moments in order!
+              I'm so proud of you for doing this ACCCHXXXITTTIVITYYY!
             </p>
             <div className="flex justify-center gap-4">
               <button

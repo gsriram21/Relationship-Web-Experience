@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -114,4 +113,48 @@
   .btn-outline {
     @apply rounded-full border-2 border-dustyblue-300 text-dustyblue-700 font-medium px-6 py-3 transition-all duration-300 hover:bg-dustyblue-50 hover:border-dustyblue-400 hover:scale-105;
   }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Carousel Animations for 15 images */
+  /* Side-to-side and tilt for 15 images */
+  @keyframes carousel-sideways-0 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(20px);} }
+  @keyframes carousel-sideways-1 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-25px);} }
+  @keyframes carousel-sideways-2 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(30px);} }
+  @keyframes carousel-sideways-3 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-18px);} }
+  @keyframes carousel-sideways-4 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(22px);} }
+  @keyframes carousel-sideways-5 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-15px);} }
+  @keyframes carousel-sideways-6 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(28px);} }
+  @keyframes carousel-sideways-7 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-20px);} }
+  @keyframes carousel-sideways-8 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(24px);} }
+  @keyframes carousel-sideways-9 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-12px);} }
+  @keyframes carousel-sideways-10 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(18px);} }
+  @keyframes carousel-sideways-11 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-10px);} }
+  @keyframes carousel-sideways-12 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(16px);} }
+  @keyframes carousel-sideways-13 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-8px);} }
+  @keyframes carousel-sideways-14 { 0%,100%{transform:translateX(0);} 50%{transform:translateX(12px);} }
+
+  @keyframes carousel-tilt-0 { 0%,100%{transform:rotate(-2deg);} 50%{transform:rotate(4deg);} }
+  @keyframes carousel-tilt-1 { 0%,100%{transform:rotate(3deg);} 50%{transform:rotate(-3deg);} }
+  @keyframes carousel-tilt-2 { 0%,100%{transform:rotate(-4deg);} 50%{transform:rotate(2deg);} }
+  @keyframes carousel-tilt-3 { 0%,100%{transform:rotate(2deg);} 50%{transform:rotate(-2deg);} }
+  @keyframes carousel-tilt-4 { 0%,100%{transform:rotate(-3deg);} 50%{transform:rotate(3deg);} }
+  @keyframes carousel-tilt-5 { 0%,100%{transform:rotate(4deg);} 50%{transform:rotate(-4deg);} }
+  @keyframes carousel-tilt-6 { 0%,100%{transform:rotate(-1deg);} 50%{transform:rotate(2deg);} }
+  @keyframes carousel-tilt-7 { 0%,100%{transform:rotate(2deg);} 50%{transform:rotate(-1deg);} }
+  @keyframes carousel-tilt-8 { 0%,100%{transform:rotate(-2deg);} 50%{transform:rotate(1deg);} }
+  @keyframes carousel-tilt-9 { 0%,100%{transform:rotate(1deg);} 50%{transform:rotate(-2deg);} }
+  @keyframes carousel-tilt-10 { 0%,100%{transform:rotate(-3deg);} 50%{transform:rotate(3deg);} }
+  @keyframes carousel-tilt-11 { 0%,100%{transform:rotate(3deg);} 50%{transform:rotate(-3deg);} }
+  @keyframes carousel-tilt-12 { 0%,100%{transform:rotate(-2deg);} 50%{transform:rotate(2deg);} }
+  @keyframes carousel-tilt-13 { 0%,100%{transform:rotate(2deg);} 50%{transform:rotate(-2deg);} }
+  @keyframes carousel-tilt-14 { 0%,100%{transform:rotate(-1deg);} 50%{transform:rotate(1deg);} }
 }

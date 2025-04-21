@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -14,29 +13,34 @@ const LoveLetterPage: React.FC = () => {
       </div>
 
       <div className="scrapbook-card p-8 max-w-2xl mx-auto mb-8">
-        <div className="border-4 border-softpink-200 rounded-xl p-6 md:p-8 bg-[url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')] bg-cover before:content-[''] before:absolute before:inset-0 before:bg-white/70 relative">
+        <div className="border-4 border-dustyblue-200 rounded-xl p-6 md:p-8 bg-white relative">
           <div className="relative z-10 font-handwritten text-xl">
             <p className="text-2xl text-dustyblue-700 mb-6">
-              Dear Namu,
+              Hi youuuuuuuuuuu,
             </p>
             
             <p className="text-dustyblue-700 mb-6 leading-relaxed">
-              This is where a heartfelt love letter will go, expressing all the beautiful moments
-              we've shared over the past 15 months. Our journey together has been filled with laughter,
-              growth, and countless precious memories.
+              Happy 15 months Namu! I love you so so so so so so so so so so so much!
+              This past month has truly been amazing for us! We've somehow gotten EVEN closer
+              to eachother, which at this point I don't even know how it's possible hehe. So
+              much has happened and through it all, we've been by eachother's side and there's
+              nothing more special to me than that.
             </p>
             
             <p className="text-dustyblue-700 mb-6 leading-relaxed">
-              From our first meeting to where we are now, every step has been a blessing.
-              I cherish every moment we've spent together and look forward to many more.
+              For our 15 months, since you taught me so much about VIBE coding and new AI
+              tools to streamline productivity, I wanted to give you this VIBE coded project! This
+              is a webapp with multiple different games and ACCHHHTIVITIES that you can play and enjoy!
+              I HOPE YOU LIKEEEE IT!!!
             </p>
             
             <p className="text-dustyblue-700 mb-8 leading-relaxed">
-              Thank you for being you, and for being mine.
+              YUHHHSSTERDAYYYY you didn't scream at me, you HUGGGIEIEEDDDDD ME!!
+              Thank you for being you, and thank you for being mine!
             </p>
             
-            <p className="text-right text-2xl text-softpink-600">
-              With all my love,<br />
+            <p className="text-right text-2xl text-dustyblue-600">
+              I LOVE YOU SOOOOOOOOOO MUCH,<br />
               Gayu
             </p>
           </div>

@@ -14,28 +14,26 @@ const Index: React.FC = () => {
         <MainButton to="/game" variant="primary" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center h-full justify-center text-center">
             <span className="text-2xl font-semibold mb-1">Timeline Shuffle Game</span>
-            <span className="text-sm opacity-80">Test your memory of our journey!</span>
+            <span className="text-sm opacity-80">Let's test your memory of our journey!</span>
           </div>
         </MainButton>
         
-        <MainButton to="/scrapbook" variant="secondary" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
+        <MainButton to="/scrapbook" variant="primary" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center h-full justify-center text-center">
             <span className="text-2xl font-semibold mb-1">Digital Scrapbook</span>
-            <span className="text-sm opacity-80">Relive our precious moments</span>
+            <span className="text-sm opacity-80">Relive some fun mems!</span>
           </div>
         </MainButton>
         
-        <MainButton to="/love-letter" variant="outline" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
+        <MainButton to="/love-letter" variant="primary" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center h-full justify-center text-center">
             <span className="text-2xl font-semibold mb-1">Love Letter from Gayu</span>
-            <span className="text-sm opacity-80">A heartfelt message just for you</span>
+            <span className="text-sm opacity-80">A heartfelt message just for you!</span>
           </div>
         </MainButton>
       </div>
       
       <div className="text-center text-dustyblue-500 animate-pulse-gentle mt-8">
-        <p className="italic text-xl font-handwritten">Happy 15 Months Anniversary!</p>
-        <p className="text-sm mt-2">❤️ Forever and always ❤️</p>
       </div>
     </div>
   );
