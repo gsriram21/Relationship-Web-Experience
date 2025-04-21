@@ -9,26 +9,26 @@ interface TimelineEvent {
   text: string;
 }
 
-const GamePage: React.FC = () => {
-  // Sample timeline events (You should replace these with your own 15 relationship events)
-  const [events, setEvents] = useState<TimelineEvent[]>([
-    { id: 1, text: "First date at the coffee shop" },
-    { id: 2, text: "Movie night under the stars" },
-    { id: 3, text: "First trip to the beach together" },
-    { id: 4, text: "Surprise birthday celebration" },
-    { id: 5, text: "Cooking class adventure" },
-    { id: 6, text: "Hiking trip to the mountains" },
-    { id: 7, text: "Meeting each other's families" },
-    { id: 8, text: "Weekend getaway to the countryside" },
-    { id: 9, text: "First argument and making up" },
-    { id: 10, text: "Adoption of our pet" },
-    { id: 11, text: "Celebrating six months together" },
-    { id: 12, text: "Dance class we took together" },
-    { id: 13, text: "Holiday celebration together" },
-    { id: 14, text: "Valentine's Day special date" },
-    { id: 15, text: "Our one year anniversary trip" },
-  ]);
+const GAME_EVENTS: TimelineEvent[] = [
+  { id: 1, text: "La Fontana: Will you?" },
+  { id: 2, text: "Walk, Bellevue Park + Mod" },
+  { id: 3, text: "Ashford WA Cabin trip" },
+  { id: 4, text: "Skagit Valley, part 1!" },
+  { id: 5, text: "K1 Speed, Char-lotte" },
+  { id: 6, text: "Disney, Universal, Miami!" },
+  { id: 7, text: "SeaPlane, Mustang, Legend night" },
+  { id: 8, text: "Ferragamo Gancini gift" },
+  { id: 9, text: "Bainbridge Island getaway" },
+  { id: 10, text: "Lazy day in, UTI oops" },
+  { id: 11, text: "Facetime dates, Namu Chicago" },
+  { id: 12, text: "EnchantMaze + Christmas fun" },
+  { id: 13, text: "Colorado trip adventure" },
+  { id: 14, text: "Voodoo naughty donuts" },
+  { id: 15, text: "Flower bouquets of LOVE!" },
+];
 
+const GamePage: React.FC = () => {
+  const [events, setEvents] = useState<TimelineEvent[]>(GAME_EVENTS);
   const [shuffledEvents, setShuffledEvents] = useState<TimelineEvent[]>([]);
   const [slots, setSlots] = useState<(TimelineEvent | null)[]>(Array(15).fill(null));
   const [showSuccess, setShowSuccess] = useState(false);
@@ -39,7 +39,7 @@ const GamePage: React.FC = () => {
   useEffect(() => {
     const shuffled = [...events].sort(() => Math.random() - 0.5);
     setShuffledEvents(shuffled);
-  }, []);
+  }, [events]);
 
   // Handle drag start
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>, item: TimelineEvent, index: number | null = null) => {
@@ -58,7 +58,7 @@ const GamePage: React.FC = () => {
     event.preventDefault();
     if (draggedEvent) {
       const newSlots = [...slots];
-      
+
       // If the dragged event is from the slots, clear its previous position
       if (draggedIndex !== null) {
         newSlots[draggedIndex] = null;
@@ -66,15 +66,15 @@ const GamePage: React.FC = () => {
         // If it's from the top options, remove it from shuffled events
         setShuffledEvents(shuffledEvents.filter(e => e.id !== draggedEvent.id));
       }
-      
+
       // Set the event in the new slot
       newSlots[slotIndex] = draggedEvent;
       setSlots(newSlots);
-      
+
       // Reset dragged state
       setDraggedEvent(null);
       setDraggedIndex(null);
-      
+
       // Check if all slots are filled correctly
       checkSuccess(newSlots);
     }
@@ -109,7 +109,7 @@ const GamePage: React.FC = () => {
       </div>
 
       {/* Available events to drag */}
-      <div className="bg-white/80 rounded-xl p-6 shadow-md mb-8">
+      <div className="bg-dustyblue-50 rounded-xl p-6 shadow-md mb-8">
         <h2 className="text-xl font-semibold text-dustyblue-700 mb-4">Events to Place:</h2>
         <div className="flex flex-wrap gap-3">
           {shuffledEvents.map((event, index) => (
@@ -126,7 +126,7 @@ const GamePage: React.FC = () => {
       </div>
 
       {/* Timeline slots */}
-      <div className="bg-white/80 rounded-xl p-6 shadow-md">
+      <div className="bg-dustyblue-50 rounded-xl p-6 shadow-md">
         <h2 className="text-xl font-semibold text-dustyblue-700 mb-4">Our Timeline:</h2>
         <div className="flex flex-col gap-3">
           {slots.map((slot, index) => (
@@ -136,10 +136,10 @@ const GamePage: React.FC = () => {
               onDrop={(e) => handleDrop(e, index)}
               className={cn(
                 "flex border-2 rounded-lg p-3 min-h-[48px] transition-colors",
-                slot ? (slot.id === index + 1 ? "border-green-400 bg-green-50" : "border-red-400 bg-red-50") : "border-dashed border-dustyblue-300"
+                slot ? (slot.id === index + 1 ? "border-dustyblue-400 bg-dustyblue-100" : "border-dustyblue-200 bg-dustyblue-50") : "border-dashed border-dustyblue-300 bg-dustyblue-50"
               )}
             >
-              <div className="w-8 h-8 rounded-full bg-dustyblue-500 text-white flex items-center justify-center mr-3">
+              <div className="w-8 h-8 rounded-full bg-dustyblue-400 text-white flex items-center justify-center mr-3">
                 {index + 1}
               </div>
               {slot ? (
@@ -150,11 +150,7 @@ const GamePage: React.FC = () => {
                 >
                   {slot.text}
                 </div>
-              ) : (
-                <div className="flex-grow flex items-center text-dustyblue-400">
-                  Drop an event here...
-                </div>
-              )}
+              ) : null}
             </div>
           ))}
         </div>
@@ -166,7 +162,7 @@ const GamePage: React.FC = () => {
           >
             Reset Game
           </button>
-          
+
           <Link
             to="/"
             className="btn-secondary text-sm"
@@ -178,8 +174,8 @@ const GamePage: React.FC = () => {
 
       {/* Success modal */}
       {showSuccess && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-md shadow-xl animate-fade-in">
+        <div className="fixed inset-0 bg-dustyblue-700/40 flex items-center justify-center p-4 z-50">
+          <div className="bg-dustyblue-50 rounded-2xl p-8 max-w-md shadow-xl animate-fade-in border border-dustyblue-200">
             <h2 className="text-3xl font-bold text-dustyblue-700 mb-4">You did it! 🎉</h2>
             <p className="text-lg text-dustyblue-600 mb-6">
               Amazing job remembering our special moments in order!
@@ -206,3 +202,4 @@ const GamePage: React.FC = () => {
 };
 
 export default GamePage;
+

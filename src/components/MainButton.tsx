@@ -10,6 +10,7 @@ interface MainButtonProps {
   className?: string;
 }
 
+// Only blue shades for all button variants
 const MainButton: React.FC<MainButtonProps> = ({
   to,
   variant = "primary",
@@ -20,7 +21,7 @@ const MainButton: React.FC<MainButtonProps> = ({
   
   const variantClasses = {
     primary: "bg-gradient-to-r from-dustyblue-400 to-dustyblue-500 text-white hover:shadow-lg",
-    secondary: "bg-gradient-to-r from-softpink-200 to-softpink-300 text-softpink-900 hover:shadow-lg",
+    secondary: "bg-gradient-to-r from-dustyblue-200 to-dustyblue-300 text-dustyblue-900 hover:shadow-lg",
     outline: "border-2 border-dustyblue-300 text-dustyblue-700 hover:bg-dustyblue-50 hover:border-dustyblue-400"
   };
 
