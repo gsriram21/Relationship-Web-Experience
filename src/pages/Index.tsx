@@ -10,23 +10,23 @@ const Index: React.FC = () => {
       <FloatingHearts />
       <AnimatedTitle className="mb-16" />
       
-      <div className="w-full max-w-3xl flex flex-col gap-6 mb-16">
-        <MainButton to="/game" variant="primary">
-          <div className="flex flex-col items-center">
+      <div className="flex justify-center w-full max-w-6xl gap-6 mb-16">
+        <MainButton to="/game" variant="primary" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center h-full justify-center text-center">
             <span className="text-2xl font-semibold mb-1">Timeline Shuffle Game</span>
             <span className="text-sm opacity-80">Test your memory of our journey!</span>
           </div>
         </MainButton>
         
-        <MainButton to="/scrapbook" variant="secondary">
-          <div className="flex flex-col items-center">
+        <MainButton to="/scrapbook" variant="secondary" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center h-full justify-center text-center">
             <span className="text-2xl font-semibold mb-1">Digital Scrapbook</span>
             <span className="text-sm opacity-80">Relive our precious moments</span>
           </div>
         </MainButton>
         
-        <MainButton to="/love-letter" variant="outline">
-          <div className="flex flex-col items-center">
+        <MainButton to="/love-letter" variant="outline" className="w-80 h-48 scrapbook-card p-4 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center h-full justify-center text-center">
             <span className="text-2xl font-semibold mb-1">Love Letter from Gayu</span>
             <span className="text-sm opacity-80">A heartfelt message just for you</span>
           </div>
@@ -42,3 +42,4 @@ const Index: React.FC = () => {
 };
 
 export default Index;
+
