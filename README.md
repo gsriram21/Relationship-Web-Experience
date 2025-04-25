@@ -1,12 +1,9 @@
-# Welcome to your Lovable project
+# Relationship Drag-N-Drop Game Web App
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/563db602-b69b-438c-a2c2-0d01854339ab
 
-## How can I edit this code?
-
-There are several ways of editing your application.
 
 **Use Lovable**
 
