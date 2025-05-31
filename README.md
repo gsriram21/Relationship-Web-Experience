@@ -2,6 +2,12 @@
 
 ## Project info
 
+**UI Mockups**
+<img width="1494" alt="image" src="https://github.com/user-attachments/assets/d5d6e133-4967-45fb-b185-62bc3073686f" />
+
+<img width="1507" alt="image" src="https://github.com/user-attachments/assets/1036c1eb-ebe0-41b9-b8c9-be5067fd0928" />
+
+
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes.
