@@ -7,6 +7,7 @@
 
 <img width="1507" alt="image" src="https://github.com/user-attachments/assets/1036c1eb-ebe0-41b9-b8c9-be5067fd0928" />
 
+<img width="1498" alt="image" src="https://github.com/user-attachments/assets/7ab134ad-d45e-4e34-9962-dd8dc1c21f3d" />
 
 **Use your preferred IDE**
 
