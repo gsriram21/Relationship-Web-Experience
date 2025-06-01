@@ -2,6 +2,10 @@
 
 ## Project info
 
+**Description**
+This is a custom interactive web app created to celebrate a relationship milestone. It features a landing page and three unique experiences: a drag-and-drop memory game that challenges the user to recall monthly anniversary activities in order, a hover-based memory carousel with short descriptions, and a digital love letter. The project blends playful interaction with personal storytelling to create a heartfelt, web-based experience. Designed to showcase both creativity and front-end development skills. 
+
+
 **UI Mockups**
 <img width="1494" alt="image" src="https://github.com/user-attachments/assets/d5d6e133-4967-45fb-b185-62bc3073686f" />
 
